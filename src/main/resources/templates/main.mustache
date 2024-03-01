@@ -1,0 +1,51 @@
+<html>
+<body>
+<div>
+    <div>Employee to add</div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="surname" placeholder="Surname">
+        <input type="text" name="department" placeholder="Department 1-5">
+        <input type="text" name="salary" placeholder="Salary">
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<div>List of employees</div>
+<form method="get" action="/department/employees">
+    <input type="text" name="department" placeholder="Department 1-5">
+    <button type="submit">Search</button>
+</form>
+
+<form action="/department/salary/sum" method="get">
+    <button type="submit">Total Salary</button>
+</form>
+<form action="/department/salary/max" method="get">
+    <button type="submit">Maximum Salary</button>
+</form>
+<form action="/department/salary/min" method="get">
+    <button type="submit">Minimum Salary</button>
+</form>
+
+<!-- Список сотрудников -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Department</th>
+        <th>Salary</th>
+    </tr>
+    {{#employees}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{surname}}</td>
+            <td>{{department}}</td>
+            <td>{{salary}}</td>
+        </tr>
+    {{/employees}}
+</table>
+
+</body>
+</html>
