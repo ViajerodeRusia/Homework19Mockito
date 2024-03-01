@@ -1,0 +1,45 @@
+/* Установка шрифта для всего документа */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Стилизация заголовков */
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Стилизация ссылок */
+a {
+    text-decoration: none; /* Убрать подчеркивание */
+    color: #007bff; /* Ссылки будут синим цветом */
+}
+
+/* Стилизация кнопок */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Стилизация формы */
+form {
+    margin-bottom: 20px;
+    margin-top: 0; /* Установите верхний отступ формы на 0 */
+}
+
+
+/* Стилизация текстовых полей */
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Стилизация сообщений об ошибках */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
